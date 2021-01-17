@@ -129,7 +129,7 @@ div.sk-chase {
 	      var pic = profile.getImageUrl();
 	      document.getElementById("circle").src = pic;
         document.getElementById("white-text email").value = email;
-	      document.getElementById("g-signin2").disabled = true;
+	      document.getElementById("g-signin2")[0].setAttribute("hidden", "");
 
         // The ID token you need to pass to your backend:
         var id_token = googleUser.getAuthResponse().id_token;
