@@ -127,8 +127,8 @@ div.sk-chase {
         console.log("Email: " + profile.getEmail());
 	      var email = profile.getEmail();
 	      var pic = profile.getImageUrl();
-	      document.getElementsByClassName("circle").src = pic;
-        document.getElementsByClassName("white-text email").value = email;
+	      document.getElementById("circle").src = pic;
+        document.getElementById("white-text email").value = email;
 
         // The ID token you need to pass to your backend:
         var id_token = googleUser.getAuthResponse().id_token;
@@ -157,9 +157,9 @@ div.sk-chase {
       <div class="background">
         <img src="background2.jpg">
       </div>
-      <a href="#user"><img class="circle" src="background3.jpg"></a>
+      <a href="#user"><img class="circle" src="background3.jpg" id="circle"></a>
       <a href="#name"><span class="white-text name">Akshit Shubham</span></a>
-      <a href="mailto:neontechrealak@gmail.com"><span class="white-text email">neontechrealak@gmail.com</span></a>
+      <a href="mailto:neontechrealak@gmail.com"><span class="white-text email" id ="white-text email">neontechrealak@gmail.com</span></a>
     </div></li>
     <li><div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div></li>
     <li><a href="CODES">CODES OF MY HOMEPAGE</a></li>
