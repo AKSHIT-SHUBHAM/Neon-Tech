@@ -129,7 +129,8 @@ div.sk-chase {
 	      var pic = profile.getImageUrl();
 	      document.getElementById("circle").src = pic;
         document.getElementById("white-text email").value = email;
-	      document.getElementById("g-signin2")[0].className="noname";
+	      document.getElementById("g-signin2")[0].setAttribute("onclick", "signOut()");;
+	      
 
         // The ID token you need to pass to your backend:
         var id_token = googleUser.getAuthResponse().id_token;
@@ -168,6 +169,14 @@ div.sk-chase {
     <li><a class="waves-effect" href="study">STUDY</a></li>
   </ul>
   <a href="#" data-target="slide-out" class="sidenav-trigger">
+	  <script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
  
 <!-- parallax -->
   <div id="index-banner" class="parallax-container" >
