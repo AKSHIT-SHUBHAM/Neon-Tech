@@ -43,14 +43,12 @@ body{
 a{
 cursor: url(""), url("cursors/Hand.cur"), default;
 }
-
 @keyframes bgg {
   0% { background: rgba(0, 153, 255, 1); }
   50% { background: rgba(41, 255, 121, 1); }
   100% { background: rgba(255, 74, 88, 1); }
 }
 .loader {
-	 animation: bgg 16087ms ease-in 
   position: absolute;
   top: 50%;
   left: 50%;
@@ -60,6 +58,7 @@ cursor: url(""), url("cursors/Hand.cur"), default;
   margin: auto;
 }
 .loader .circle {
+	 animation: bgg 16087ms ease-in alternate infinite;
   position: absolute;
   width: 38px;
   height: 38px;
