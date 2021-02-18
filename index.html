@@ -19,10 +19,6 @@
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="google-signin-scope" content="profile email">
-  <meta name="google-signin-client_id" content="923045266998-srk1b9t2hm2j647cuih04gmp5oe05e67.apps.googleusercontent.com">
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
   <title>Neon Tech Official</title>
 
   <!-- CSS  -->
@@ -139,29 +135,6 @@ cursor: url(""), url("cursors/Hand.cur"), default;
 </style>
 </head>
 <body class="teal lighten-5 ;">	
-	<!--google account-->
-	 <script>
-      function onSignIn(googleUser) {
-        // Useful data for your client-side scripts:
-        var profile = googleUser.getBasicProfile();
-        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-        console.log('Full Name: ' + profile.getName());
-        console.log('Given Name: ' + profile.getGivenName());
-        console.log('Family Name: ' + profile.getFamilyName());
-        console.log("Image URL: " + profile.getImageUrl());
-        console.log("Email: " + profile.getEmail());
-	      var email = profile.getEmail();
-	      var pic = profile.getImageUrl();
-	      document.getElementById("circle").src = pic;
-        document.getElementById("am").value = email;
-	      
-	      
-
-        // The ID token you need to pass to your backend:
-        var id_token = googleUser.getAuthResponse().id_token;
-        console.log("ID Token: " + id_token);
-      }
-    </script>
 <!-- loading -->
 <div class='loader'>
   <div class="bg"></div>
@@ -178,28 +151,20 @@ cursor: url(""), url("cursors/Hand.cur"), default;
           $(".loader").fadeOut("slow");
         });
     </script>
-<!-- 
-SIDE MENU 
-  <ul id="slide-out" class="sidenav">
-      <a href="#user"><img class="circle" src="images/background3.jpg" id="circle"></a>
-      <a href="mailto:neontechrealak@gmail.com"><span class="white-text email" id ="white-text email"></span></a>
-    </div></li>
-    <li><div class="g-signin2" id="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div></li>
-    <li><a href="CODES">CODES OF MY HOMEPAGE</a></li>
-    <li><div class="divider"></div></li>
-    <li><a class="waves-effect" href="study">STUDY</a></li>
-	  <li><a  onclick="signOut();" href="#">Sign out</a></li>
-  </ul>
-  <a data-target="slide-out" class="sidenav-trigger">
-	  <script>
-  function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('User signed out.');
-    });
-  }
-</script>
- -->
+ <nav> <!-- navbar content here  --> </nav>
+
+ <ul id="slide-out" class="sidenav">
+   <li><div class="user-view">
+     <div class="background">
+       <img src="images/office.jpg">
+     </div>
+   </div>
+  </li>
+   <li><a class="waves-effect" href="/CODES/">Codes of my Homepage</a></li>
+   <li><a class="waves-effect" href="/Study/">Third Link With Waves</a></li>
+   <li><a class="waves-effect" href="https://materializecss.com/">https://materializecss.com/</a></li>
+ </ul>
+ <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 <!-- parallax -->
   <div id="index-banner" class="parallax-container" >
   <!-- side menu button-->
