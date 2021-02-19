@@ -19,7 +19,10 @@
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-
+  <script>
+    function showd(){
+    dialog.showModal();}
+  </script>
   <title>Neon Tech Official</title>
 
   <!-- CSS  -->
@@ -31,6 +34,8 @@
   <script src="js/material-components-web.min.js"></script>
   <script src="js/modernizr.custom.79639.js"></script>
   <script src="js/jquery/jquery.js"></script>
+  <link rel="stylesheet" href="css/material.indigo-pink.min.css">
+<script defer src="js/material.min.js"></script>
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link href="css/" rel="stylesheet">
   <!-- STYLE -->
@@ -173,8 +178,24 @@ cursor: url(""), url("cursors/Hand.cur"), default;
 </style>
 </head>
 
-<body class="teal lighten-5 ;">	
-
+<body class="teal lighten-5 ;" onload="showd()">	
+<!-- DIALOG -->
+<dialog class="mdl-dialog">
+  <h4 class="mdl-dialog__title">UNDER DEVELOPMENT</h4>
+  <div class="mdl-dialog__content">
+    <p>
+      THANKS FOR SUPPORTIG
+      <br>
+      ESC TO cancel
+    </p>
+  </div>
+</dialog>
+<script>
+  function showd()
+  {
+    var dialog = document.querySelector('dialog');
+  dialog.showModal();}
+</script>
 <!-- loading -->
 <div class='loader'>
   <div class="bg"></div>
