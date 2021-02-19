@@ -38,6 +38,11 @@ body{
 a{
 cursor: url(""), url("cursors/Hand.cur"), default;
 }
+.heading1
+{
+  color: #ffec02 !important;
+}
+/* LOADING CSS */
 @keyframes bgg {
   0% { background: rgba(0, 153, 255, 1); }
   50% { background: rgba(41, 255, 121, 1); }
@@ -130,7 +135,116 @@ cursor: url(""), url("cursors/Hand.cur"), default;
     opacity: 0;
   }
 }
+/* IMAGE SLIDER CSS */
+.slider{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+}
 
+.slides{
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img{
+  width: 800px;
+  height: 500px;
+}
+
+/*css for manual slide navigation*/
+
+.navigation-manual{
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn{
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background: #40D3DC;
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+  margin-left: -60%;
+}
+
+/*css for automatic navigation*/
+
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div{
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: #40D3DC;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: #40D3DC;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background: #40D3DC;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: #40D3DC;
+}
+      
 </style>
 </head>
 <body class="teal lighten-5 ;">	
@@ -170,7 +284,7 @@ cursor: url(""), url("cursors/Hand.cur"), default;
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center teal-text text-lighten-2 ">Neon Tech</h1>
+        <h1 class="header center  heading1">Neon Tech</h1>
 		
 		
         <div class="row center">
@@ -183,7 +297,7 @@ cursor: url(""), url("cursors/Hand.cur"), default;
 
       </div>
     </div>
-    <div class="parallax"><img src="images/background1.jpg" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img src="images/background4.jpg" alt="Unsplashed background img 1"></div>
   </div>
 
 <!-- LOREM IPSUM -->
@@ -198,7 +312,64 @@ cursor: url(""), url("cursors/Hand.cur"), default;
 <p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
 <p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
 </div>
-  
+<!-- parrallax2 -->
+<div class="parallax-container">
+  <div class="parallax"><img src="images/parallax1.jpg"></div>
+</div>
+<div class="section white">
+  <div class="row container">
+    <h2 class="header">Your support </h2>
+    <p class="grey-text text-darken-3 lighten-3">PLEASE SUPPORT US JUST BY YOUTUBE</p>
+  </div>
+  <br>
+<!--image slider start-->
+<div class="slider">
+  <div class="slides">
+    <!--radio buttons start-->
+    <input type="radio" name="radio-btn" id="radio1">
+    <input type="radio" name="radio-btn" id="radio2">
+    <input type="radio" name="radio-btn" id="radio3">
+    <input type="radio" name="radio-btn" id="radio4">
+    <!--radio buttons end-->
+    <!--slide images start-->
+    <div class="slide first">
+      <a href="https://www.youtube.com/watch?v=rWRW8oN1a_k" target="_blank"><img src="images/imgsl1.jpg" alt=""></a>
+    </div>
+    <div class="slide">
+      <a href="https://www.youtube.com/watch?v=rWRW8oN1a_k" target="_blank"><img src="images/imgsl2.png" alt=""></a>
+    </div>
+    <div class="slide">
+      <a href="https://www.youtube.com/watch?v=asOkzEJ9jdU"  target="_blank"> <img src="images/imgsl3.png" alt=""> </a>
+    </div>
+    <div class="slide">
+      <a href="https://www.youtube.com/watch?v=pYzFuubypFU" target="_blank"><img src="images/imgsl4.png" alt=""></a>
+    </div>
+    <!--slide images end-->
+  <!--manual navigation start-->
+  <div class="navigation-auto">
+  <div class="navigation-manual">
+    <label for="radio1" class="manual-btn"></label>
+    <label for="radio2" class="manual-btn"></label>
+    <label for="radio3" class="manual-btn"></label>
+    <label for="radio4" class="manual-btn"></label>
+  </div>
+</div>
+  <!--manual navigation end-->
+</div>
+<!--image slider end-->
+
+<!-- SLIDER JS -->
+<script type="text/javascript">
+var counter = 1;
+setInterval(function(){
+  document.getElementById('radio' + counter).checked = true;
+  counter++;
+  if(counter > 4){
+    counter = 1;
+  }
+}, 5000);
+</script>
+      
  
   <!--  Scripts-->
   <script src="js/main.js"></script>
