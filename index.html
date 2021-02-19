@@ -369,7 +369,14 @@ setInterval(function(){
   }
 }, 5000);
 </script>
-      
+<script type="text/javascript"> 
+  document.oncontextmenu = rightClick; 
+
+  function rightClick(clickEvent) { 
+      clickEvent.preventDefault(); 
+      // return false; 
+  } 
+</script>     
  
   <!--  Scripts-->
   <script src="js/main.js"></script>
