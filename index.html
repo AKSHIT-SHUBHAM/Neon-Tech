@@ -27,6 +27,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="css/aos.css" />
   <link href="css/material-components-web.min.css" rel="stylesheet">
   <script src="js/material-components-web.min.js"></script>
   <script src="js/modernizr.custom.79639.js"></script>
@@ -379,7 +380,7 @@ cursor: url(""), url("cursors/Hand.cur"), default;
   </div>
   <br>
 <!--image slider start-->
-<div class="slider">
+<div class="slider" data-aos="fade-in">
   <div class="slides">
     <!--radio buttons start-->
     <input type="radio" name="radio-btn" id="radio1">
@@ -452,6 +453,10 @@ window.addEventListener("click",function(){
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
+  <script src="js/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="js/init.js"></script>
   <script src="js/main.js"></script>
   </body>
