@@ -35,6 +35,7 @@
   <link href="css/" rel="stylesheet">
   <!-- STYLE -->
 <style>
+html { overflow-y: scroll; }
 body{
 	cursor: url(""), url("cursors/Arrow.cur"), default;
 }
@@ -281,6 +282,7 @@ cursor: url(""), url("cursors/Hand.cur"), default;
 </head>
 
 <body class="teal lighten-5 ;">	
+
 <!-- loading -->
 <div class='loader'>
   <div class="bg"></div>
@@ -320,11 +322,13 @@ cursor: url(""), url("cursors/Hand.cur"), default;
         <i class="fa fa-times"></i> Exit
       </div>
     </div>
+    
     <!-- ska -->
     <header class="mdc-top-app-bar mdc-top-app-bar--short">
       <div class="mdc-top-app-bar__row">
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-          <a href="#" data-target="slide-out" class="sidenav-trigger"><button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
+          <a href="#" data-target="slide-out" class="sidenav-trigger" onclick="M.toast({html: '<br>DRAWER OPENED<br>'})">
+            <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
           </a><span class="mdc-top-app-bar__title">Title</span>
         </section>
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
@@ -332,9 +336,7 @@ cursor: url(""), url("cursors/Hand.cur"), default;
         </section>
       </div>
     </header>
-    <main class="mdc-top-app-bar--short-fixed-adjust">
-      App content
-    </main>
+
 <!-- SIDENAV -->
 <ul id="slide-out" class="sidenav">
    <li><div class="user-view">
@@ -393,61 +395,16 @@ cursor: url(""), url("cursors/Hand.cur"), default;
     <p class="grey-text text-darken-3 lighten-3">PLEASE SUPPORT US JUST BY YOUTUBE</p>
   </div>
   <br>
-<!--image slider start-->
-<div class="slider" data-aos="fade-in">
-  <div class="slides">
-    <!--radio buttons start-->
-    <input type="radio" name="radio-btn" id="radio1">
-    <input type="radio" name="radio-btn" id="radio2">
-    <input type="radio" name="radio-btn" id="radio3">
-    <input type="radio" name="radio-btn" id="radio4">
-    <!--radio buttons end-->
-    <!--slide images start-->
-    <div class="slide first">
-      <a href="https://www.youtube.com/watch?v=rWRW8oN1a_k" target="_blank"><img src="images/imgsl1.jpg" alt=""></a>
-    </div>
-    <div class="slide">
-      <a href="https://www.youtube.com/watch?v=rWRW8oN1a_k" target="_blank"><img src="images/imgsl2.png" alt=""></a>
-    </div>
-    <div class="slide">
-      <a href="https://www.youtube.com/watch?v=asOkzEJ9jdU"  target="_blank"> <img src="images/imgsl3.png" alt=""> </a>
-    </div>
-    <div class="slide">
-      <a href="https://www.youtube.com/watch?v=pYzFuubypFU" target="_blank"><img src="images/imgsl4.png" alt=""></a>
-    </div>
-    <!--slide images end-->
-  <!--manual navigation start-->
-  <div class="navigation-auto">
-  <div class="navigation-manual">
-    <label for="radio1" class="manual-btn"></label>
-    <label for="radio2" class="manual-btn"></label>
-    <label for="radio3" class="manual-btn"></label>
-    <label for="radio4" class="manual-btn"></label>
-  </div>
-</div>
-  <!--manual navigation end-->
-</div>
-<!--image slider end-->
 
-<!-- SLIDER JS -->
-<script type="text/javascript">
-var counter = 1;
-setInterval(function(){
-  document.getElementById('radio' + counter).checked = true;
-  counter++;
-  if(counter > 4){
-    counter = 1;
-  }
-}, 5000);
-</script>
-<script type="text/javascript"> 
-  document.oncontextmenu = rightClick; 
+<!-- badges -->
+<div class="collection">
+  <a href="#!" class="collection-item"><span class="badge"></span>YOUTUBE</a>
+  
+  <a href="#!" class="collection-item"><span class="badge"></span>INSTAGRAM</a>
+</div>
 
-  function rightClick(clickEvent) { 
-      clickEvent.preventDefault(); 
-      // return false; 
-  } 
-</script>
+
+
 <!-- context menu js      -->
  <script>
    window.addEventListener("contextmenu",function(event){
@@ -462,16 +419,41 @@ window.addEventListener("click",function(){
 });
 
  </script>
+ 
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Footer Content</h5>
+          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2014 Copyright Text
+      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+  </footer>
+      
 
   <!--  Scripts-->
   <script src="js/main.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
-  <script src="js/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
   <script src="js/init.js"></script>
   <script src="js/main.js"></script>
+  
   </body>
 </html>
+
