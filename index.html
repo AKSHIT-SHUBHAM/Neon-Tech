@@ -19,6 +19,7 @@
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <script>
     function showd(){
     dialog.showModal();}
@@ -180,21 +181,31 @@ cursor: url(""), url("cursors/Hand.cur"), default;
 
 <body class="teal lighten-5 ;" onload="showd()">	
 <!-- DIALOG -->
-<dialog class="mdl-dialog">
-  <h4 class="mdl-dialog__title">UNDER DEVELOPMENT</h4>
-  <div class="mdl-dialog__content">
-    <p>
-      THANKS FOR SUPPORTIG
-      <br>
-      ESC TO cancel
-    </p>
-  </div>
-</dialog>
+<button id="show-dialog" type="button" class="mdl-button">Show Dialog</button>
+  <dialog class="mdl-dialog">
+     <h4 class="mdl-dialog__title container">WEBSITE UNDER DEV-<br>ELOPMENT</h4>
+     <div class="mdl-dialog__content">
+      <p>
+        Thanx for supporting :) 
+      </p>
+    </div>
+    <div class="mdl-dialog__actions mdl-dialog__actions--full-width">
+            <button type="button" class="mdl-button close"><b>OKAY</b>></button>
+    </div>
+  </dialog>
 <script>
   function showd()
   {
     var dialog = document.querySelector('dialog');
-  dialog.showModal();}
+  dialog.showModal();
+  var showModalButton = document.querySelector('.show-modal');
+    if (! dialog.showModal) {
+      dialogPolyfill.registerDialog(dialog);
+    }
+    dialog.querySelector('.close').addEventListener('click', function() {
+      dialog.close();
+    });
+  }
 </script>
 <!-- loading -->
 <div class='loader'>
