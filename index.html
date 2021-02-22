@@ -145,7 +145,25 @@ cursor: url(""), url("cursors/Hand.cur"), default;
     opacity: 0;
   }
 }
+/* serach */
+input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
 
+input[type=text]:focus {
+  width: 100%;
+}
 /* conext menu css */
 #context-menu {
   position:fixed;
@@ -193,6 +211,7 @@ cursor: url(""), url("cursors/Hand.cur"), default;
             <button type="button" class="mdl-button close"><b>OKAY</b>></button>
     </div>
   </dialog>
+  <!-- dialog script -->
 <script>
   function showd()
   {
@@ -247,17 +266,19 @@ cursor: url(""), url("cursors/Hand.cur"), default;
       </div>
     </div>
     
-    <!-- ska -->
+    <!-- navbar-->
     <header class="mdc-top-app-bar mdc-top-app-bar--short">
       <div class="mdc-top-app-bar__row">
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-          <a href="#" data-target="slide-out" class="sidenav-trigger" onclick="M.toast({html: '<br>DRAWER OPENED<br>'})">
+          <a href="#"  data-target="slide-out" class="sidenav-trigger" onclick="M.toast({html: 'DRAWER OPENED<br>'})">
             <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
           </a>
           <a href="./" style="color: #eee;" ><span class="mdc-top-app-bar__title">Neon Tech</span></a>
         </section>
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-          <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Bookmark this page">bookmark</button>
+          <form>
+            <input type="text" name="search" placeholder="Search..">
+          </form>
         </section>
       </div>
     </header>
@@ -281,7 +302,7 @@ cursor: url(""), url("cursors/Hand.cur"), default;
 
     <div class="section no-pad-bot">
       <div class="container">
-        <br><br>
+        <br><br><br><br><br>
         <h1 class="header center  heading1">Neon Tech</h1>
 		
 		
@@ -344,6 +365,7 @@ window.addEventListener("click",function(){
 });
 
  </script>
+ <!-- footer -->
    <footer class="page-footer">
     <div class="container">
       <div class="row">
