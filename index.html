@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
  <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
@@ -394,6 +394,29 @@ window.addEventListener("click",function(){
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   <script src="js/main.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDeHcyYfDPUzfkHtLmXoDpLQwqoMaVvWLQ",
+    authDomain: "neotechwebapp.firebaseapp.com",
+    projectId: "neotechwebapp",
+    storageBucket: "neotechwebapp.appspot.com",
+    messagingSenderId: "923045266998",
+    appId: "1:923045266998:web:addb335002eb96e6cc3a97",
+    measurementId: "G-GB542F4MM4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
   
   </body>
 </html>
